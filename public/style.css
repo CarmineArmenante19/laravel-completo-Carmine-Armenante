@@ -1,0 +1,50 @@
+/* Variabili */
+body{
+    background-color:rgb(143, 185, 150) ;
+}
+
+:root{
+    --b:rgb(65, 90, 119);
+    --a:rgb(143, 185, 150)
+}
+
+/* Navbar */
+.navbar{
+    background-color:var(--b);
+}
+
+/* section */
+
+.btn-custom{
+    padding: 10px;
+    border: 2px solid var(--b);
+    border-radius: 20px;
+}
+
+.btn-custom:hover{
+    background-color: var(--b);
+    border: 2px solid var(--a);
+}
+
+.div-custom{
+    min-width: 300px;
+    width: 300px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.element{
+    height: 30px;
+    width: 30px;
+    position: relative;
+    scale: 0.5;
+    background-color: var(--b);
+}
+
+.colonna-card{
+    display: flex;
+    flex-wrap: nowrap;
+}
