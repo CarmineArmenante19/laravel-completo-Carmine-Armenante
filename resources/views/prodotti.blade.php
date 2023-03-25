@@ -24,6 +24,9 @@
               <li class="nav-item">
                 <a class="nav-link" href="{{route('prodotti')}}">Prodotti</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{route('chi-siamo')}}">Chi siamo</a>
+              </li>
             </ul>
           </div>
         </div>

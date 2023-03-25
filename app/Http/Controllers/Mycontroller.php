@@ -49,7 +49,28 @@ class Mycontroller extends Controller
     public function chiSiamo(){
         $title = 'Chi siamo';
         $letterhead = 'I nostri operatori';
-        return view('chi-siamo',['title'=>$title, 'letterhead'=>$letterhead]);
+        $operators = [
+            ['name'=>'Carmine', 'surname'=>'Armenante','skilss'=>'Full stack developer junior e appasionato di pianeti'],
+            ['name'=>'Alin', 'surname'=>'Draghia','skilss'=>'Full stack developer junior e appassionato di videogiochi'],
+            ['name'=>'Matteo', 'surname'=>'Sisto','skilss'=>'Full stack developer senior e appassionato di puff'],
+        ];
+        return view('chi-siamo',['title'=>$title, 'letterhead'=>$letterhead, 'operators'=>$operators]);
+    }
+
+    public function dettaglioChisiamo($name){
+        $operators = [
+            ['name'=>'Carmine', 'surname'=>'Armenante','skils'=>'Full stack developer junior e appasionato di pianeti'],
+            ['name'=>'Alin', 'surname'=>'Draghia','skils'=>'Full stack developer junior e appassionato di videogiochi'],
+            ['name'=>'Matteo', 'surname'=>'Sisto','skils'=>'Full stack developer senior e appassionato di puff'],
+        ];
+
+        foreach ($operators as $operator) {
+            if($operator['name'] == $name){
+                
+                return view('dettaglio-chisiamo',['operator'=>$operator]);
+            }
+        }
+
     }
 }
         

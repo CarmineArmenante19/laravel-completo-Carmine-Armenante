@@ -20,4 +20,6 @@ Route::get('/prodotti',[Mycontroller::class, 'prodotti'])->name('prodotti');
 
 Route::get('/prodotti/dettaglio/{name}',[Mycontroller::class, 'dettaglioProdotti'])->name('dettagliop');
 
-// Route::get('/chi-siamo',[Mycontroller::class, 'chiSiamo'])->name('chi-siamo');
+Route::get('/chi-siamo',[Mycontroller::class, 'chiSiamo'])->name('chi-siamo');
+
+Route::get('/chi-siamo/dettaglio-chisiamo/{name}',[Mycontroller::class, 'dettaglioChisiamo'])->name('dettaglio-chisiamo');

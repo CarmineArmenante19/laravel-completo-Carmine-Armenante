@@ -23,6 +23,9 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{{route('prodotti')}}">Prodotti</a>
+              </li>             
+               <li class="nav-item">
+                <a class="nav-link" href="{{route('chi-siamo')}}">Chi siamo</a>
               </li>
             </ul>
           </div>
@@ -38,20 +41,19 @@
               <h1 class="display-1">{{$title}}</h1>
               <h3>{{$letterhead}}</h3>
               <ul>
-                @foreach ($categories as $category)
+                @foreach ($operators as $operator)
                     <li>
-                      {{$category['name']}}
+                      {{$operator['name']}}
                     </li>
                 @endforeach
               </ul>
           </div>
           <div class="col-md-8 colonna-card">
-          @foreach ($products as $product)
+          @foreach ($operators as $operator)
                 <div class="card mx-3 ">
-                  <img src="{{$product['img']}}" class="card-img-top" alt="immagine prodotto">
                   <div class="card-body">
-                    <h5 class="card-title">{{$product['name']}}</h5>
-                    <a href="{{route('dettagliop',['name'=>$product['name']])}}" class="btn btn-primary">Details</a>
+                    <h5 class="card-title">{{$operator['name']}} {{$operator['surname']}}</h5>
+                    <a href="{{route('dettaglio-chisiamo',['name'=>$operator['name']])}}" class="btn btn-primary">Details</a>
                   </div>
                 </div>
                 @endforeach

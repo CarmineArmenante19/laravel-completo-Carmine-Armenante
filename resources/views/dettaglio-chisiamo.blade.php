@@ -39,11 +39,10 @@
       <div class="row mt-5">
           <div class="col-12 colonna-card d-flex justify-content-center align-items-center">
                 <div class="card mx-3 ">
-                  <img src="{{$product['img']}}" class="card-img-top" alt="immagine prodotto">
                   <div class="card-body">
-                    <h5 class="card-title">{{$product['name']}}</h5>
-                    <p>{{$product['description']}}</p>
-                    <button class="btn"><a href="{{route('prodotti')}}">Back</a></button>
+                    <h5 class="card-title">{{$operator['name']}} {{$operator['surname']}}</h5>
+                    <p>{{$operator['skils']}}</p>
+                    <button class="btn"><a href="{{route('chi-siamo')}}">Back</a></button>
                   </div>
                 </div>
               </div>
